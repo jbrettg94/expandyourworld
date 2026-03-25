@@ -17,7 +17,7 @@ header {
 
 /* Sidebar toggle button (hidden on desktop) */
 #sidebarToggle {
-    display: block;
+    display: none;
     font-size: 18px;
     background-color: #005fa3;
     color: white;
@@ -48,7 +48,7 @@ header {
 
 /* Sidebar links */
 .sidebar a {
-    display: none;
+    display: block;
     color: white;
     text-decoration: none;
     margin: 10px 0;
