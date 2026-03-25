@@ -10,11 +10,11 @@
 <body>
     <header>
         <h1>Expand Your World</h1>
+        <button id="sidebarToggle">☰ Lessons</button>
     </header>
-    <main>
     <div class="container">
         <!-- Sidebar -->
-        <div class="sidebar">
+        <div class="sidebar" id="sidebar">
             <h3>Lessons</h3>
             <a href="german1intro.html">German I - Introduction</a>
             <a href="german1lesson1.html">German I - Lesson 1</a>
@@ -24,12 +24,18 @@
 
         <!-- PDF Content -->
         <div class="content">
-            <h2>German I - Level 1 - Introduction</h2>
-            <iframe 
-              src="https://docs.google.com/viewer?url=https://jbrettg94.github.io/expandyourworld/Assets/German1Level1Intro.pdf&embedded=true">
+            <h2>Choose a lesson</h2>
+            <iframe id="pdfViewer" src= "Assets/German1Level1Intro.pdf">
             </iframe>
         </div>
     </div>
-    </main>
+    <script>
+    const sidebar = document.getElementById('sidebar');
+    const toggleBtn = document.getElementById('sidebarToggle');
+    
+    toggleBtn.addEventListener('click', () => {
+        sidebar.classList.toggle('show');
+    });
+    </script>
 </body>
 </html>
