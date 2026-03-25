@@ -48,7 +48,7 @@ header {
 
 /* Sidebar links */
 .sidebar a {
-    display: block;
+    display: none;
     color: white;
     text-decoration: none;
     margin: 10px 0;
