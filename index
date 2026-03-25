@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expand Your World</title>
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to My GitHub Page</h1>
+    </header>
+    <main>
+        <h2>Embedded PDF Example</h2>
+        <p>If your browser cannot display the PDF, you can <a href="assets/my-document.pdf">download it here</a>.</p>
+        <iframe src="assets/my-document.pdf"></iframe>
+    </main>
+</body>
+</html>
