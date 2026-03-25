@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expand Your World</title>
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Expand Your World</h1>
+        <button id="sidebarToggle">☰ Lessons</button>
+    </header>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar" id="sidebar">
+            <h3>Lessons</h3>
+            <a href="index.html">Home</a>
+            <a href="german1intro.html">German I - Introduction</a>
+            <a href="german1lesson1.html">German I - Lesson 1</a>
+            <a href="german1lesson2.html">German I - Lesson 2</a>
+            <a href="german1lesson3.html">German I - Lesson 3</a>
+        </div>
+
+        <!-- PDF Content -->
+        <div class="content">
+            <h2>EYW - German I - Lesson 2</h2>
+            <iframe id="pdfViewer" src= "Assets/German1Lesson2.pdf">
+            </iframe>
+        </div>
+    </div>
+    <script>
+    const sidebar = document.getElementById('sidebar');
+    const toggleBtn = document.getElementById('sidebarToggle');
+    
+    toggleBtn.addEventListener('click', () => {
+        sidebar.classList.toggle('show');
+    });
+    </script>
+</body>
+</html>
