@@ -10,25 +10,40 @@ header {
     background-color: #007acc;
     color: white;
     padding: 15px;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Sidebar toggle button (hidden on desktop) */
+#sidebarToggle {
+    display: none;
+    font-size: 18px;
+    background-color: #005fa3;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
 /* Container holding sidebar and content */
 .container {
     display: flex;
     flex-direction: row;
-    height: calc(100vh - 70px); /* full height minus header */
-    overflow: hidden; /* prevents container from growing too tall */
+    height: calc(100vh - 70px);
+    overflow: hidden;
 }
 
 /* Sidebar */
 .sidebar {
-    width: 200px;           /* fixed width for sidebar */
-    flex-shrink: 0;         /* prevent shrinking */
+    width: 200px;
+    flex-shrink: 0;
     background-color: #333;
     color: white;
     padding: 15px;
-    overflow-y: auto;       /* scroll if sidebar is taller than viewport */
+    overflow-y: auto;
+    transition: transform 0.3s ease;
 }
 
 /* Sidebar links */
@@ -47,10 +62,10 @@ header {
 
 /* Content area */
 .content {
-    flex: 1;                /* take up remaining width */
+    flex: 1;
     display: flex;
     flex-direction: column;
-    padding: 0;             /* no extra padding so iframe fills space */
+    padding: 0;
     overflow: hidden;
 }
 
@@ -59,9 +74,9 @@ header {
     margin: 10px 15px;
 }
 
-/* PDF Viewer (iframe or object) */
+/* PDF Viewer */
 iframe, object {
-    flex: 1;                /* fill vertical space in content area */
+    flex: 1;
     width: 100%;
     border: none;
 }
@@ -71,19 +86,34 @@ a {
     color: #007acc;
 }
 
-/* Responsive: stack sidebar on top for small screens */
+/* Responsive: small screens */
 @media (max-width: 768px) {
+    #sidebarToggle {
+        display: block; /* show toggle button */
+    }
+
     .container {
         flex-direction: column;
     }
-    
+
     .sidebar {
-        width: 100%;
-        height: auto;
+        position: absolute;
+        top: 70px; /* below header */
+        left: 0;
+        height: calc(100vh - 70px);
+        transform: translateX(-100%); /* hide sidebar initially */
+        z-index: 1000;
+    }
+
+    .sidebar.show {
+        transform: translateX(0); /* slide in */
     }
 
     .content {
         flex: 1;
+        overflow: hidden;
+        position: relative;
+        z-index: 0;
     }
 }
 
