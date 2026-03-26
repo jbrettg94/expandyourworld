@@ -25,7 +25,13 @@
 
         <!-- PDF Content -->
         <div class="content">
-            <h2>EYW - German I - Introduction</h2>
+            <div class="title-bar">
+                <h2>EYW - German I - Introduction</h2>
+                <h3>Vocab Audio <span class="audio-icon" onclick="playAudio('german1_introaudio')">🔊</span></h3>
+            </div>
+            <audio id="german1_introaudio">
+                <source src="Assets/german1_introaudio.mp3" type="audio/mpeg">
+            </audio>
             <iframe id="pdfViewer" src= "Assets/German1Level1Intro.pdf">
             </iframe>
         </div>
