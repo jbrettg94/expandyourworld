@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expand Your World</title>
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Expand Your World</h1>
+        <button id="sidebarToggle">☰ Lessons</button>
+    </header>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar" id="sidebar">
+            <h3>Lessons</h3>
+            <a href="index.html">Home</a>
+            <a href="german1intro.html">German I - Introduction</a>
+            <a href="german1lesson1.html">German I - Lesson 1</a>
+            <a href="german1lesson2.html">German I - Lesson 2</a>
+            <a href="german1lesson3.html">German I - Lesson 3</a>
+        </div>
+
+        <!-- PDF Content -->
+        <div class="content">
+            <div class="title-bar">
+                <h2>EYW - German I - Lesson 3</h2>
+                <h3>Vocab Audio <span class="audio-icon" onclick="playAudio('german1_3vocabaudio')">🔊</span> | 
+                  Reading Audio <span class="audio-icon" onclick="playAudio('german1_3readingaudio')">🔊</span></h3>
+            </div>
+            <audio id="german1_3vocabaudio">
+                <source src="Assets/german1_3vocabaudio.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="german1_3readingaudio">
+                <source src="Assets/german1_3readingaudio.mp3" type="audio/mpeg">
+            </audio>
+            <iframe id="pdfViewer" src= "Assets/German1Lesson3.pdf">
+            </iframe>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
