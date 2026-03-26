@@ -121,6 +121,7 @@ a {
     display: flex;
     justify-content: space-between; /* pushes left & right */
     align-items: center;            /* vertical alignment */
+    padding: 10px;
 }
 
 .title-bar h2, 
