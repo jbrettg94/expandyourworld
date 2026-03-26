@@ -1,7 +1,8 @@
-/* General Styles */
-body {
-    font-family: Arial, sans-serif;
+/* Make height calculations work properly */
+html, body {
+    height: 100%;
     margin: 0;
+    font-family: Arial, sans-serif;
     background-color: #f4f4f4;
 }
 
@@ -9,13 +10,13 @@ body {
 header {
     background-color: #007acc;
     color: white;
-    padding: 15px;
+    padding: 15px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-/* Sidebar toggle button (hidden on desktop) */
+/* Sidebar toggle button */
 #sidebarToggle {
     display: none;
     font-size: 18px;
@@ -27,7 +28,7 @@ header {
     cursor: pointer;
 }
 
-/* Container holding sidebar and content */
+/* Main layout container */
 .container {
     display: flex;
     flex-direction: row;
@@ -37,7 +38,7 @@ header {
 
 /* Sidebar */
 .sidebar {
-    width: 200px;
+    width: 220px;
     flex-shrink: 0;
     background-color: #333;
     color: white;
@@ -52,7 +53,7 @@ header {
     color: white;
     text-decoration: none;
     margin: 10px 0;
-    padding: 5px;
+    padding: 8px;
     border-radius: 4px;
 }
 
@@ -65,32 +66,55 @@ header {
     flex: 1;
     display: flex;
     flex-direction: column;
-    padding: 0;
-    overflow: hidden;
     height: 100%;
+    background-color: white;
 }
 
-/* Page titles inside content */
-.content h2 {
-    margin: 10px 15px;
+/* Title bar */
+.title-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: white;
+    border-bottom: 2px solid #007acc;
 }
 
-/* PDF Viewer */
-iframe, object {
+/* Remove default margins */
+.title-bar h2,
+.title-bar h3 {
+    margin: 0;
+}
+
+/* Audio icon */
+.audio-icon {
+    cursor: pointer;
+    font-size: 20px;
+    margin-left: 8px;
+}
+
+.audio-icon:hover {
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+
+/* PDF viewer fills remaining space */
+#pdfViewer {
     flex: 1;
     width: 100%;
     border: none;
 }
 
-/* Links outside sidebar */
+/* Normal links */
 a {
     color: #007acc;
 }
 
-/* Responsive: small screens */
+/* Mobile layout */
 @media (max-width: 768px) {
+
     #sidebarToggle {
-        display: block; /* show toggle button */
+        display: block;
     }
 
     .container {
@@ -99,43 +123,19 @@ a {
 
     .sidebar {
         position: absolute;
-        top: 70px; /* below header */
+        top: 70px;
         left: 0;
         height: calc(100vh - 70px);
-        transform: translateX(-100%); /* hide sidebar initially */
+        transform: translateX(-100%);
         z-index: 1000;
+        width: 220px;
     }
 
     .sidebar.show {
-        transform: translateX(0); /* slide in */
+        transform: translateX(0);
     }
 
     .content {
-        flex: 1;
-        overflow: hidden;
-        position: relative;
-        z-index: 0;
+        height: calc(100vh - 70px);
     }
-}
-
-.title-bar {
-    display: flex;
-    justify-content: space-between; /* pushes left & right */
-    align-items: center;            /* vertical alignment */
-    padding-top: 15px;
-    border-bottom: 1px solid #ccc;
-}
-
-.title-bar h2, 
-.title-bar h3 {
-    margin: 0; /* removes default spacing issues */
-}
-
-.audio-icon {
-    cursor: pointer;
-    font-size: 22px;
-}
-
-.audio-icon:hover {
-    opacity: 0.7;
 }
