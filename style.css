@@ -67,6 +67,7 @@ header {
     flex-direction: column;
     padding: 0;
     overflow: hidden;
+    height: 100%;
 }
 
 /* Page titles inside content */
@@ -121,7 +122,8 @@ a {
     display: flex;
     justify-content: space-between; /* pushes left & right */
     align-items: center;            /* vertical alignment */
-    padding-top: 40px;
+    padding-top: 15px;
+    border-bottom: 1px solid #ccc;
 }
 
 .title-bar h2, 
