@@ -162,6 +162,8 @@ a {
     border: 2px solid black;
     border-radius: 15px;
     background-color: lightgreen;
+    text-decoration: none;
+    color: inherit;
 }
 
 .tile:hover {
