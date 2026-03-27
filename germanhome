@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expand Your World</title>
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Expand Your World</h1>
+    </header>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar" id="sidebar">
+        </div>
+
+        <!-- PDF Content -->
+        <div class="content">
+            <div class="title-bar">
+                <h2>Choose a German Course</h2>
+            </div>
+            <div id="tilebox">
+                <p class="tile" id="german1tile">German I</p>
+                <p class="tile" id="german2tile">German II</p>
+                <p class="tile" id="german3tile">German III</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
