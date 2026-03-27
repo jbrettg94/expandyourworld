@@ -157,6 +157,7 @@ a {
     justify-content: center; /* horizontal centering */
     align-items: center;     /* vertical centering */
     text-align: center;
-    border-color: black;
-    background: light-green;
+    border: 2px solid black;
+    border-radius: 15px;
+    background-color: light-green;
 }
