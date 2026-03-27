@@ -167,3 +167,8 @@ a {
 .tile:hover {
     background-color: lightgray;
 }
+
+#tilebox a {
+    text-decoration: none;
+    color: inherit;
+}
