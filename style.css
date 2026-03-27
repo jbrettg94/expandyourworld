@@ -166,11 +166,15 @@ a {
     color: inherit;
 }
 
+#tilebox a {
+    text-decoration: none !important;
+    color: inherit;
+}
+
 .tile:hover {
     background-color: lightgray;
 }
 
-#tilebox a {
-    text-decoration: none !important;
-    color: inherit;
+.tile:active {
+    background-color: darkgreen;
 }
