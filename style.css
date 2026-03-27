@@ -175,6 +175,6 @@ a {
     background-color: lightgray;
 }
 
-.tile:active {
+.tile.active {
     background-color: darkgreen;
 }
